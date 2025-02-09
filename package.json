@@ -1,0 +1,111 @@
+{
+  "name": "move-file-to-group",
+  "displayName": "Move File to Group",
+  "author": {
+      "name": "Nic Lake"
+  },
+  "description": "Add options to move the selected file to a different group the tab contextual menu.",
+  "icon": "images/icon.png",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.97.0"
+  },
+  "galleryBanner": {
+    "color": "#282a36",
+    "theme": "dark"
+  },
+  "categories": [
+    "Other"
+  ],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Microsoft/vscode-wordcount.git"
+	},
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "move-file-to-group.moveRight",
+        "title": "Move Right"
+      },
+      {
+        "command": "move-file-to-group.moveLeft",
+        "title": "Move Left"
+      },
+      {
+        "command": "move-file-to-group.moveUp",
+        "title": "Move Up"
+      },
+      {
+        "command": "move-file-to-group.moveDown",
+        "title": "Move Down"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "move-file-to-group.moveRight",
+        "key": "ctrl+alt+right",
+        "mac": "cmd+alt+right",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "move-file-to-group.moveLeft",
+        "key": "ctrl+alt+left",
+        "mac": "cmd+alt+left",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "move-file-to-group.moveUp",
+        "key": "ctrl+alt+up",
+        "mac": "cmd+alt+up",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "move-file-to-group.moveDown",
+        "key": "ctrl+alt+down",
+        "mac": "cmd+alt+down",
+        "when": "editorTextFocus"
+      }
+    ],
+    "menus": {
+      "editor/title/context": [
+        {
+          "command": "move-file-to-group.moveRight",
+          "group": "4_move_group@1"
+        },
+        {
+          "command": "move-file-to-group.moveLeft",
+          "group": "4_move_group@2"
+        },
+        {
+          "command": "move-file-to-group.moveDown",
+          "group": "4_move_group@3"
+        },
+        {
+          "command": "move-file-to-group.moveUp",
+          "group": "4_move_group@4"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.97.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.22.0",
+    "@typescript-eslint/parser": "^8.22.0",
+    "eslint": "^9.19.0",
+    "typescript": "^5.7.3",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  }
+}
