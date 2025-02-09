@@ -8,10 +8,7 @@ Add options to move the selected file to a different group the tab contextual me
 
 Long-time JetBrains IDE users will be familiar with the "Move [direction]" options from the tab contextual menus. VS Code defaults to Split, which isn't always the most ideal, and the Move commands are buried in keyboard settings & never surfaced in any menus.
 
-This extension puts "Move [direction]" options in two places:
-
-- the editor tab contextual (right click) menu
-- the View > Editor Layout... menu
+This extension puts "Move [direction]" options in the editor tab contextual (right click) menu.
 
 ## Known Issues
 
