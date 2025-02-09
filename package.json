@@ -21,8 +21,10 @@
 		"type": "git",
 		"url": "https://github.com/niclake/move-file-to-group"
 	},
-  "activationEvents": [],
-  "main": "./out/extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./extension.js",
   "contributes": {
     "commands": [
       {
