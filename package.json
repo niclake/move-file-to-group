@@ -4,6 +4,7 @@
   "author": {
       "name": "Nic Lake"
   },
+  "publisher": "niclake",
   "description": "Add options to move the selected file to a different group the tab contextual menu.",
   "icon": "images/icon.png",
   "version": "0.1.0",
